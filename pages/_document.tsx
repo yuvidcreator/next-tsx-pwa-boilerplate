@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 import Script from 'next/script'
 import { GTM_ID } from '../lib/Gtm'
 
-const APP_NAME = 'Cricket Aryans Next App'
+const APP_NAME = 'WebinoxMedia Next-TS PWA App'
 
 export default function Document() {
     return (
@@ -19,16 +19,16 @@ export default function Document() {
                 <meta name='msapplication-tap-highlight' content='no' />
                 <meta name='theme-color' content='#000000' />
 
-                <link rel='apple-touch-icon' href='/touch-icon-iphone.png' />
-                <link rel='apple-touch-icon' sizes='152x152' href='/192x192.png' />
-                <link rel='apple-touch-icon' sizes='180x180' href='/192x192.png' />
-                <link rel='apple-touch-icon' sizes='167x167' href='/192x192.png' />
+                <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
+                <link rel='apple-touch-icon' sizes='152x152' href='/icons/152x152.png' />
+                <link rel='apple-touch-icon' sizes='180x180' href='/icons/180x180.png' />
+                <link rel='apple-touch-icon' sizes='167x167' href='/icons/167x167.png' />
 
-                <link rel='icon' type='image/png' sizes='32x32' href='/48x48.png' />
-                <link rel='icon' type='image/png' sizes='16x16' href='/48x48.png' />
+                <link rel='icon' type='image/png' sizes='32x32' href='/icons/32x32.png' />
+                <link rel='icon' type='image/png' sizes='16x16' href='/icons/16x16.png' />
                 <link rel='manifest' href='/manifest.json' />
-                <link rel='mask-icon' href='/512x512.png' color='#5bbad5' />
-                <link rel='shortcut icon' href='/favicon.ico' />
+                <link rel='mask-icon' href='/icons/512x512.png' color='#5bbad5' />
+                <link rel='shortcut icon' href='/icons/favicon.ico' />
             </Head>
             <body>
                 {/*  Google Tag Manager inside Head tag */}
