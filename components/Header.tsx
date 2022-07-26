@@ -60,7 +60,7 @@ function MobileNav({open, setOpen}: {open?: any, setOpen?: any}) {
                 <div className="flex items-center filter drop-shadow-md h-20 ml-4"> 
                 {/*logo container*/}
                     <Image 
-                    src="/Aryans-Logo.png" 
+                    src="/webinoxmedia-logo.png" 
                     alt="" 
                     width={63} 
                     height={63} 
@@ -117,7 +117,7 @@ function Header() {
             </div>
             <header className="sticky top-0 z-[1000] flex items-center justify-between px-2 h-[64px] md:px-12 shadow-md dark:bg-gray-800 dark:shadow-orange-900/50 dark:shadow-md">
                 <Image 
-                    src="/Aryans-Logo.png" 
+                    src="/webinoxmedia-logo.png" 
                     alt="" 
                     width={63} 
                     height={63} 
