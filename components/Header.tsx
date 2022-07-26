@@ -3,6 +3,7 @@ import { FaHome, FaSearch, FaUser, FaFolder, FaDotCircle, FaAddressCard, FaEnvel
 import { useRouter } from "next/router";
 import { useState } from 'react';
 import Link from 'next/link';
+import { useTheme } from 'next-themes'
 import ThemeChangerButton from './ThemeChangerButton';
 
 
@@ -53,6 +54,20 @@ const links = [
 
 function MobileNav({open, setOpen}: {open?: any, setOpen?: any}) {
     const router = useRouter();
+    const { resolvedTheme } = useTheme()
+    let src
+  
+    switch (resolvedTheme) {
+      case 'light':
+        src = '/webinoxmedia-logo.png'
+        break
+      case 'dark':
+        src = '/White-wmds-logo1.png'
+        break
+      default:
+        src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+        break
+    }
 
     return (
         <>
@@ -60,7 +75,7 @@ function MobileNav({open, setOpen}: {open?: any, setOpen?: any}) {
                 <div className="flex items-center filter drop-shadow-md h-20 ml-4"> 
                 {/*logo container*/}
                     <Image 
-                    src="/webinoxmedia-logo.png" 
+                    src={src} 
                     alt="" 
                     width={180} 
                     height={63} 
@@ -91,7 +106,7 @@ function MobileNav({open, setOpen}: {open?: any, setOpen?: any}) {
                     </div> */}
                 </div>
 
-                <button className="uppercase mt-8 border px-4 py-1 ml-6 rounded-md font-medium tracking-wide bg-[#070077] dark:bg-orange-500 text-white hover:bg-blue-600 hover:text-white transition duration-200 shadow-lg">
+                <button className="uppercase mt-8 border px-4 py-1 ml-6 rounded-md font-medium tracking-wide bg-[#070077] dark:bg-blue-500 text-white hover:bg-blue-600 hover:text-white transition duration-200 shadow-lg">
                     Appointments
                 </button>
             </div>
@@ -104,6 +119,20 @@ function MobileNav({open, setOpen}: {open?: any, setOpen?: any}) {
 function Header() {
     const router = useRouter();
     const [open, setOpen] = useState(false);
+    const { resolvedTheme } = useTheme()
+    let src
+  
+    switch (resolvedTheme) {
+      case 'light':
+        src = '/webinoxmedia-logo.png'
+        break
+      case 'dark':
+        src = '/White-wmds-logo1.png'
+        break
+      default:
+        src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+        break
+    }
 
     return (
         <>
@@ -117,7 +146,7 @@ function Header() {
             </div>
             <header className="sticky top-0 z-[1000] flex items-center justify-between px-2 h-[64px] md:px-12 shadow-md dark:bg-gray-800 dark:shadow-blue-400/50 dark:shadow-md">
                 <Image 
-                    src="/webinoxmedia-logo.png" 
+                    src={src} 
                     alt="" 
                     width={171} 
                     height={57} 
