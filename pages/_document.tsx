@@ -2,15 +2,16 @@ import { Html, Head, Main, NextScript } from 'next/document';
 import Script from 'next/script'
 import { GTM_ID } from '../lib/Gtm'
 
+const APP_NAME = 'Cricket Aryans Next App'
 
 export default function Document() {
     return (
         <Html lang="en">
             <Head>
-                <meta name='application-name' content='Cricket Aryans Next App' />
+                <meta name='application-name' content={APP_NAME} />
                 <meta name='apple-mobile-web-app-capable' content='yes' />
                 <meta name='apple-mobile-web-app-status-bar-style' content='default' />
-                <meta name='apple-mobile-web-app-title' content='Cricket Aryans Next App' />
+                <meta name='apple-mobile-web-app-title' content={APP_NAME} />
                 <meta name='format-detection' content='telephone=no' />
                 <meta name='mobile-web-app-capable' content='yes' />
                 <meta name='msapplication-config' content='/browserconfig.xml' />
@@ -18,16 +19,15 @@ export default function Document() {
                 <meta name='msapplication-tap-highlight' content='no' />
                 <meta name='theme-color' content='#000000' />
 
-                <link rel='apple-touch-icon' type='image/png' href='/touch-icon-iphone.png' />
-                <link rel='apple-touch-icon' type='image/png' sizes='152x152' href='/192x192.png' />
-                <link rel='apple-touch-icon' type='image/png' sizes='180x180' href='/192x192.png' />
-                <link rel='apple-touch-icon' type='image/png' sizes='167x167' href='/192x192.png' />
+                <link rel='apple-touch-icon' href='/touch-icon-iphone.png' />
+                <link rel='apple-touch-icon' sizes='152x152' href='/192x192.png' />
+                <link rel='apple-touch-icon' sizes='180x180' href='/192x192.png' />
+                <link rel='apple-touch-icon' sizes='167x167' href='/192x192.png' />
 
                 <link rel='icon' type='image/png' sizes='32x32' href='/48x48.png' />
                 <link rel='icon' type='image/png' sizes='16x16' href='/48x48.png' />
                 <link rel='manifest' href='/manifest.json' />
                 <link rel='mask-icon' href='/512x512.png' color='#5bbad5' />
-                <link rel="icon" href="/favicon.ico" />
                 <link rel='shortcut icon' href='/favicon.ico' />
             </Head>
             <body>

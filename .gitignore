@@ -40,12 +40,8 @@ yarn-error.log*
 *.tsbuildinfo
 
 
-# custom PWA files
-# sw.js
-# sw.js.map
-# workbox-*.js
-# workbox-*.map
-
 # Generated via next-pwa
 **/public/workbox**
 **/public/sw**
+**/public/precache.*.js
+**/public/fallback-*.js

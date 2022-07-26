@@ -12,7 +12,9 @@ self.fallback = async request => {
       });
 
     case 'image':
-      if (false) {}
+      if (true) return caches.match("/images/Aryans-Web-Background.jpg", {
+        ignoreSearch: true
+      });
 
     case 'audio':
       if (false) {}
