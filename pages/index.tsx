@@ -10,10 +10,12 @@ import Image from 'next/image'
 const Home: NextPage = () => {
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen">
-      <GradientText text={"Yuvraaj"} />
-      <DynamicTextForPages text={"Home Page"} />
-    </div>
+    <section>
+      <div className="flex flex-col justify-center items-center min-h-screen">
+        <GradientText text={"Yuvraaj"} />
+        <DynamicTextForPages text={"Home Page"} />
+      </div>
+    </section>
   )
 }
 

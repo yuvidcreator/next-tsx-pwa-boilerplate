@@ -133,7 +133,7 @@ function Header() {
     }
 
     return (
-        <header>
+        <header className="">
             <div className="px-4 py-1 bg-[#070077] dark:bg-blue-400 text-white">
                 <p className="text-xs md:text-md text-center">
                     Pick from Any of our 3 solutions And Sell, only with WebinoxMedia.{' '}
