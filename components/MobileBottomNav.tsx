@@ -38,7 +38,7 @@ const MobileBottomNav = () => {
 							<a
 								className={`flex h-full w-full flex-col items-center justify-center space-y-1 ${
 									router.pathname === href
-										? "text-orange-700 dark:text-orange-400"
+										? "text-blue-800 dark:text-blue-300"
 										: "text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
 								}`}
 							>

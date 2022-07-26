@@ -62,7 +62,7 @@ function MobileNav({open, setOpen}: {open?: any, setOpen?: any}) {
                     <Image 
                     src="/webinoxmedia-logo.png" 
                     alt="" 
-                    width={63} 
+                    width={180} 
                     height={63} 
                     className="cursor-pointer" 
                     onClick={() => router.push("/")}
@@ -107,7 +107,7 @@ function Header() {
 
     return (
         <>
-            <div className="px-4 py-1 bg-[#070077] dark:bg-orange-600 text-white">
+            <div className="px-4 py-1 bg-[#070077] dark:bg-blue-400 text-white">
                 <p className="text-xs md:text-md text-center">
                     Pick from Any of our 3 solutions And Sell, only with WebinoxMedia.{' '}
                     <a href='#' className="underline">
@@ -115,12 +115,12 @@ function Header() {
                     </a>
                 </p>
             </div>
-            <header className="sticky top-0 z-[1000] flex items-center justify-between px-2 h-[64px] md:px-12 shadow-md dark:bg-gray-800 dark:shadow-orange-900/50 dark:shadow-md">
+            <header className="sticky top-0 z-[1000] flex items-center justify-between px-2 h-[64px] md:px-12 shadow-md dark:bg-gray-800 dark:shadow-blue-400/50 dark:shadow-md">
                 <Image 
                     src="/webinoxmedia-logo.png" 
                     alt="" 
-                    width={63} 
-                    height={63} 
+                    width={171} 
+                    height={57} 
                     className="cursor-pointer filter drop-shadow-md" 
                     onClick={() => router.push("/")}
                 />
@@ -140,9 +140,9 @@ function Header() {
                         setOpen(!open)
                     }}>
                         {/* hamburger button */}
-                        <span className={`h-0.5 w-8 bg-[#0B0B45] dark:bg-orange-500 rounded-lg transform transition duration-300 ease-in-out ${open ? "rotate-45 translate-y-2.5" : ""}`} />
-                        <span className={`h-0.5 w-8 bg-[#0B0B45] dark:bg-orange-500 rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
-                        <span className={`h-0.5 w-8 bg-[#0B0B45] dark:bg-orange-500 rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-2.5" : ""}`} />
+                        <span className={`h-0.5 w-8 bg-[#0B0B45] dark:bg-blue-400 rounded-lg transform transition duration-300 ease-in-out ${open ? "rotate-45 translate-y-2.5" : ""}`} />
+                        <span className={`h-0.5 w-8 bg-[#0B0B45] dark:bg-blue-400 rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
+                        <span className={`h-0.5 w-8 bg-[#0B0B45] dark:bg-blue-400 rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-2.5" : ""}`} />
                     </div>
 
                     <div className="hidden md:flex ml-auto dark:bg-gray-800">
