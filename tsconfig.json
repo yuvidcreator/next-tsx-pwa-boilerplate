@@ -20,5 +20,5 @@
     "incremental": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules","**/public/fallback-*.js"]
+  "exclude": ["node_modules","public/fallback-development.js"]
 }

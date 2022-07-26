@@ -7,12 +7,12 @@ self.fallback = async request => {
   // https://developer.mozilla.org/en-US/docs/Web/API/RequestDestination
   switch (request.destination) {
     case 'document':
-      if (true) return caches.match("/myofflinepage", {
+      if (true) return caches.match("/_offline", {
         ignoreSearch: true
       });
 
     case 'image':
-      if (true) return caches.match("/images/Aryans-Web-Background.jpg", {
+      if (true) return caches.match("/images/wmds.jpg", {
         ignoreSearch: true
       });
 

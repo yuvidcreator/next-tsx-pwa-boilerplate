@@ -12,15 +12,14 @@ const nextConfig = withPWA({
     register: true,
     skipWaiting: true,
     fallbacks: {
-      document: '/myofflinepage',
-      image: '/images/Aryans-Web-Background.jpg',
+      image: '/images/wmds.jpg',
       // document: '/other-offline',  // if you want to fallback to a custom page other than /_offline
       // font: '/static/font/fallback.woff2',
       // audio: ...,
       // video: ...,
     },
     cacheOnFrontEndNav: true,
-    // reloadOnOnline: true,
+    reloadOnOnline: true,
 	},
   reactStrictMode: true,
   poweredByHeader: false, // disable powered by header.

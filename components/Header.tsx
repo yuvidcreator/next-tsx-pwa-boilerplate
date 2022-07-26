@@ -52,7 +52,7 @@ const links = [
 	},
 ]
 
-function MobileNav({open, setOpen}: {open?: any, setOpen?: any}) {
+function MobileNav({open, setOpen}: {open?: boolean, setOpen?: boolean | any}) {
     const router = useRouter();
     const { resolvedTheme } = useTheme();
     let logosrc
@@ -70,7 +70,9 @@ function MobileNav({open, setOpen}: {open?: any, setOpen?: any}) {
     }
 
     return (
-        <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md dark:bg-gray-800`}>
+        <div className={`absolute top-0 left-0 h-screen w-screen bg-white transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md dark:bg-gray-800`} onClick={() => {
+            setOpen(!open)
+        }}>
             <div className="flex items-center filter drop-shadow-md h-20 ml-4"> 
             {/*logo container*/}
                 <Image 
@@ -82,15 +84,14 @@ function MobileNav({open, setOpen}: {open?: any, setOpen?: any}) {
                 onClick={() => router.push("/")}
                 />
             </div>
-            <div className="flex sticky flex-col ml-6 my-4 space-y-4 text-md text-[#0B0B45] font-medium dark:text-blue-200">
+            <div className="flex flex-col ml-6 my-4 space-y-4 text-md text-[#0B0B45] font-medium dark:text-blue-200">
                 {links.map(({ href, label}) => (
                 <Link key={label} href={href}>
-                    <a className="inline-flex hover:text-blue-600">
+                    <a className="inline-flex">
                     {label}
                     </a>
                 </Link>
-                ))}                    
-
+                ))}
                 {/* <div className="flex text-white mt-8 space-x-4">
                     <button className="">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -133,16 +134,8 @@ function Header() {
     }
 
     return (
-        <header className="">
-            <div className="px-4 py-1 bg-[#070077] dark:bg-blue-400 text-white">
-                <p className="text-xs md:text-md text-center">
-                    Pick from Any of our 3 solutions And Sell, only with WebinoxMedia.{' '}
-                    <a href='#' className="underline">
-                    Learn more
-                    </a>
-                </p>
-            </div>
-            <nav className="sticky top-0 z-[1000] flex items-center justify-between px-2 h-[64px] md:px-12 shadow-md dark:bg-gray-800 dark:shadow-blue-400/50 dark:shadow-md">
+        <header>
+            <nav className="fixed top-0 z-[1000] flex items-center justify-between w-full px-2 h-[64px] md:px-12 shadow-md dark:bg-gray-800 dark:shadow-blue-400/50 dark:shadow-md">
                 <Image 
                     src={logosrc} 
                     alt="" 
