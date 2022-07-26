@@ -1,8 +1,12 @@
+import MobileBottomNav from "./MobileBottomNav"
 
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer>
+      <h1 className="mb-20 lg:mb-0">Footer</h1>
+      <MobileBottomNav />
+    </footer>
   )
 }
 

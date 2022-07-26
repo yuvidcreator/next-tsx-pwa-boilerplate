@@ -1,3 +1,5 @@
+import DynamicTextForPages from '@/components/DynamicTextForPages'
+import GradientText from '@/components/GradientText'
 import {useRouter} from 'next/router'
 
 const Services = () => {
@@ -5,7 +7,10 @@ const Services = () => {
     const { slug } = router.query
 
     return (
-        <div>Services slug: {slug}</div>
+        <div className="flex flex-col justify-center items-center min-h-screen">
+            <GradientText text={"Your Query Blog slug is"} />
+            <DynamicTextForPages text={`slug: /${slug}`} />
+        </div>
     )
 }
 

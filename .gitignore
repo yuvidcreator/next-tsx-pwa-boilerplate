@@ -43,4 +43,4 @@ yarn-error.log*
 **/public/workbox**
 **/public/sw**
 **/public/precache.*.js
-**/public/fallback-*.js
+**/public/fallback-development.js

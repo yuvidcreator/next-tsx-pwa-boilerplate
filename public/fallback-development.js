@@ -12,7 +12,7 @@ self.fallback = async request => {
       });
 
     case 'image':
-      if (true) return caches.match("/images/Aryans-Web-Background.jpg", {
+      if (true) return caches.match("/images/unnamed.png", {
         ignoreSearch: true
       });
 

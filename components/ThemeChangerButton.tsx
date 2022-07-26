@@ -17,9 +17,7 @@ const ThemeChangerButton = () => {
 
     return (
         <div className="flex flex-col justify-center items-cente text-center p-2">
-            <button
-                className="rounded-full p-2"
-                onClick={() => {
+            <button className="rounded-full p-2" onClick={() => {
                     setTheme(theme === 'light' ? 'dark' : 'light')
                 }}
             >
