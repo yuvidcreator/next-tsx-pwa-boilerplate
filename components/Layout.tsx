@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
-// import Footer from "./Footer"
-// import Header from "./Header"
-// import MobileBottomNav from "./MobileBottomNav";
+import Footer from "./Footer"
+import Header from "./Header"
+import MobileBottomNav from "./MobileBottomNav";
 
 interface Props {
   children?: ReactNode
@@ -11,10 +11,10 @@ interface Props {
 const Layout = ({children, ...props}: Props) => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
         {children}
-      {/* <Footer /> */}
-      {/* <MobileBottomNav /> */}
+      <Footer />
+      <MobileBottomNav />
     </>
   )
 }
