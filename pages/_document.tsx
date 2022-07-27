@@ -36,7 +36,7 @@ export default function Document() {
             </Head>
             <body>
                 {/*  Google Tag Manager code for Body tag */}
-                <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0"></iframe>`}}></noscript>
+                <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
                 {/* Google Tag Manager inside Body tag End */}
 
                 <Main />
