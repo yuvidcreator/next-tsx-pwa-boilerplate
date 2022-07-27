@@ -1,6 +1,8 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 import { GTM_ID } from '../lib/Gtm'
 import AnalyticsScripts from '@/components/AnalyticsScripts';
+import { Business, DOMAIN_NAME } from '@/lib/Web';
+import BodySchemaMarkup from '@/components/Seo/BodySchemaMarkup';
 
 const APP_NAME = 'WebinoxMedia Next-TS PWA App'
 
@@ -33,11 +35,39 @@ export default function Document() {
                 <link rel='manifest' href='/manifest.json' />
                 <link rel='mask-icon' href='/icons/512x512.png' color='#5bbad5' />
                 <link rel='shortcut icon' href='/icons/favicon.ico' />
+
+                {/* Schema Markeup - Common */}
+                <script type="application/ld+json" 
+                    dangerouslySetInnerHTML={{
+                        __html: `{
+                        "@context": "http://schema.org/",
+                        "@type": "${Business.bizType}",
+                        "url": "${DOMAIN_NAME}",
+                        "logo": "${DOMAIN_NAME}/webinoxmedia-logo.png"
+                    }`}}>
+                </script>
+
+                <script type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: `{ 
+                            "@context": "https://schema.org/", 
+                            "@type": "WebSite", 
+                            "name": "${APP_NAME}", 
+                            "url": "${DOMAIN_NAME}/", 
+                            "potentialAction": { 
+                                "@type": "SearchAction", 
+                                "target": "${DOMAIN_NAME}/search?q={search_term_string}", 
+                                "query-input": "required name=search_term_string"
+                            }
+                        }`}}>
+                </script>
             </Head>
             <body>
                 {/*  Google Tag Manager code for Body tag */}
                 <noscript dangerouslySetInnerHTML={{ __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`}}></noscript>
                 {/* Google Tag Manager inside Body tag End */}
+
+                <BodySchemaMarkup  />
 
                 <Main />
 

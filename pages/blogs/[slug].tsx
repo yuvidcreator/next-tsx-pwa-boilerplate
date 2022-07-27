@@ -1,7 +1,7 @@
 import {useRouter} from 'next/router'
 import DynamicTextForPages from '@/components/DynamicTextForPages'
 import GradientText from '@/components/GradientText'
-import SeoMetas from '@/components/SeoMetas'
+import SeoMetas from '@/components/Seo/SeoMetas'
 
 const Post = () => {
     const router = useRouter()
@@ -12,6 +12,9 @@ const Post = () => {
         description: "WebinoxMedia - The Best Web Development Company in Pune.",
         keywords: "WebinoxMedia, Web Development, Ecommerce Web Development, React JS Developer, Python Django Developer, Next JS Developer",
         image: "/image.png",
+        publishedAt: "2022-07-25",
+        updatedAt: "2022-7-28",
+        author: "Yuvraj Limbole"
     }
 
     return (
@@ -22,6 +25,9 @@ const Post = () => {
                 keywords={meta.keywords}
                 image={meta.image}
                 pageslug={router.asPath}
+                publishedAt={meta.publishedAt}
+                updatedAt={meta.updatedAt}
+                author={meta.author}
             />
             <GradientText text={"Your Query Blog slug is"} />
             <DynamicTextForPages text={`slug: /${slug}`} />
