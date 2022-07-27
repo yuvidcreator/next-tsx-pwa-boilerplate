@@ -4,7 +4,7 @@ import Header from "./Header"
 import MobileBottomNav from "./MobileBottomNav"
 
 interface Props {
-  children?: ReactNode
+  children: ReactNode
   // any props that come into the component
 }
 

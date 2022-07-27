@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { FaHome, FaSearch, FaUser, FaFolder, FaDotCircle, FaAddressCard, FaEnvelopeOpenText } from "react-icons/fa";
 import { useRouter } from "next/router";
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import Link from 'next/link';
 import { useTheme } from 'next-themes'
 import ThemeChangerButton from './ThemeChangerButton';
@@ -52,7 +52,7 @@ const links = [
 	},
 ]
 
-function MobileNav({open, setOpen}: {open?: boolean, setOpen?: boolean | any}) {
+function MobileNav({open, setOpen}: {open: boolean, setOpen: Dispatch<SetStateAction<any>>}) {
     const router = useRouter();
     const { resolvedTheme } = useTheme();
     let logosrc

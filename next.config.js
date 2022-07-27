@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const withPWA = require('next-pwa')
-// const runtimeCaching = require("next-pwa/cache");
+// const runtimeCaching = require('next-pwa/cache')
 
 const nextConfig = withPWA({
   pwa: {
@@ -20,6 +20,7 @@ const nextConfig = withPWA({
     },
     cacheOnFrontEndNav: true,
     reloadOnOnline: true,
+    // runtimeCaching,
 	},
   reactStrictMode: true,
   poweredByHeader: false, // disable powered by header.
