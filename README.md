@@ -1,8 +1,21 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Features
+1. Next JS with TypeScript
+2. Dynamic SEO tags / component implemented 
+3. next-theme used for Dark-Light mode
+4. Fully functional PWA implemented
+5. Separate Analytics Component implemented to Integrate with GTM, Facebook pixel etc.
 ## Getting Started
 
-First, run the development server:
+First, Install it your local machine with required dependencies using,
+npm install
+
+or
+
+yarn
+
+Sencond, run the development server:
 
 ```bash
 npm run dev
@@ -13,6 +26,8 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+
+and replce GTM_ID with your GTM_ID in .env.local file.
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
