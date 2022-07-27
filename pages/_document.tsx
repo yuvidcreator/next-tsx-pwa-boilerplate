@@ -40,14 +40,14 @@ export default function Document() {
                 {/* Google Tag Manager inside Head tag End */}
 
                 {/*  Google Tag Manager inside Body tag */}
-                <noscript>
+                <script>
                     <iframe
                         src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
                         height="0"
                         width="0"
                         // style={{ display: 'none', visibility: 'hidden' }}
                     />
-                </noscript>
+                </script>
                 {/* Google Tag Manager inside Body tag End */}
 
                 <Main />

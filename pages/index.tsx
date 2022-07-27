@@ -8,16 +8,18 @@ import SeoMetas from '@/components/SeoMetas'
 // import ComingSoon from '@/components/ComingSoon'
 
 
-const meta = {
-  title: "Home",
-  description: "WebinoxMedia - The Best Web Development Company in Pune.",
-  keywords: "WebinoxMedia, Web Development, Ecommerce Web Development, React JS Developer, Python Django Developer, Next JS Developer",
-  image: "/image.png",
-}
+
 
 
 const Home: NextPage = () => {
   const router = useRouter();
+
+  const meta = {
+    title: "WebinoxMedia",
+    description: "WebinoxMedia - The Best Web Development Company in Pune.",
+    keywords: "WebinoxMedia, Web Development, Ecommerce Web Development, React JS Developer, Python Django Developer, Next JS Developer",
+    image: "/image.png",
+  }
 
   return (
     <section>
@@ -33,9 +35,11 @@ const Home: NextPage = () => {
       <div className="flex flex-col justify-center items-center min-h-screen">
         <GradientText text={"Yuvraaj"} />
         <DynamicTextForPages text={"Home Page"} />
+        
       </div>
     </section>
   )
 }
 
 export default Home
+
