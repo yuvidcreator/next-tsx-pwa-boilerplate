@@ -23,7 +23,7 @@ const Services = () => {
                 image={meta.image}
                 pageslug={router.asPath}
             />
-            <GradientText text={"Your Query Blog slug is"} />
+            <GradientText text={"Your Query Services slug is"} />
             <DynamicTextForPages text={`slug: /${slug}`} />
         </div>
     )
