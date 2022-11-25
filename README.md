@@ -54,6 +54,10 @@ Don't forget to update environment variables as you used in .env.local
 
 
 ## Docker Commands
+docker tag local-image:tagname new-repo:tagname
+# e.g. docker tag b93b6a8a9eb4 yuvraaj103/cricket-aryans-nextapp:v1
+
+docker push new-repo:tagname
 # For Local Development
 docker-compose up --build --force-recreate
 # For Production Deployment
