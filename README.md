@@ -50,3 +50,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 For production at the time of deployment,
 Don't forget to update environment variables as you used in .env.local
+
+
+
+## Docker Commands
+# For Local Development
+docker-compose up --build --force-recreate
+# For Production Deployment
+docker-compose -f docker-compose.prod.yml up --build --force-recreate

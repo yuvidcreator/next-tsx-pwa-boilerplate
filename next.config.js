@@ -28,6 +28,7 @@ const nextConfig = withPWA({
   images: {
     domains: ['images.unsplash.com','dummyimage.com'],
   },
+  output: 'standalone',
 })
 
 module.exports = nextConfig
