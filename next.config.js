@@ -24,6 +24,7 @@ const nextConfig = withPWA({
 	},
   reactStrictMode: true,
   poweredByHeader: false, // disable powered by header.
+  trailingSlash: true,
   swcMinify: true, // minify using swc/rust.
   images: {
     domains: ['images.unsplash.com','dummyimage.com'],
